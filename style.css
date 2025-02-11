@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #000000; /* Background color set to black */
+    color: white; /* Default text color updated to white */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF; /* Link color set to blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Header Styles */
+header {
+    background-color: #c6c2b6; /* Light beige background for the header */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-image {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+    margin-right:1000px;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* About Section Styling */
+#about {
+    padding: 40px 0;
+    background-color: #000000;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    flex: 1;
+}
+
+/* Section Styles */
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Demo Reels Section */
+.audio-reels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.audio-reel {
+    background: #121212;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.audio-reel audio {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.reel-description {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #121212; /* Match the dark background style of index page sections */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    max-width: 800px;
+    margin: 40px auto; /* Center the form on the page */
+    text-align: left;
+}
+
+.contact-form h2 {
+    color: white; /* Match the header styles from the index page */
+    text-align: center; /* Center-align the form heading */
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 1.1rem;
+    color: #ccc; /* Subtle contrast for the description text */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Add consistent spacing between form fields */
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: white; /* Match the label text color to the rest of the form */
+}
+
+input, textarea {
+    width: 100%; /* Stretch fields to match the layout of the index page */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Match rounded corners used elsewhere */
+    background: #000; /* Match input background with the page theme */
+    color: white; /* Ensure text is visible on the dark background */
+}
+
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+button {
+    display: block;
+    width: 100%; /* Full-width button to match layout consistency */
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px; /* Match rounded corners for consistency */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3; /* Add hover effect for interactivity */
+}
+
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #021452;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card img {
+    border-radius: 5px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 10px 0 5px;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #007BFF;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Center the image */
+.center-image {
+    display: block;
+    margin: 0 auto; /* Horizontally centers the image */
+    max-width: 100px; /* Optional: set a maximum width for responsiveness */
+    margin-right:580px
+  }
+
+  /* Footer link styling */
+.footer-link {
+    color: #007bff; /* A nice blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Slightly larger text */
+    font-weight: bold; /* Make it bold */
+    padding: 5px 10px; /* Add padding around the link */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .footer-link:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: white; /* Make text white on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+  }
+  
+a img {
+    display: block;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Optional rounded corners */
+  }
+
+  /* Animation on hover */
+  a img:hover {
+    transform: scale(1.1); /* Scales the image slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audio-reels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .audio-reel {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+  
