@@ -7,7 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000; // Use the PORT environment variable provided by Render
 
 // Middleware to serve static files
-app.use(express.static(__dirname + '/../'));
+app.use(express.static(__dirname + '/../public'));
+
 
 // Middleware for parsing form data
 app.use(bodyParser.urlencoded({ extended: true }));
