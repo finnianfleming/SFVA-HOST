@@ -4,7 +4,11 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000; // Define the server port
+const PORT = process.env.PORT || 3000; // Use the PORT environment variable provided by Render
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
 
 // Serve static files from the public folder
 app.use(express.static(__dirname + '/../'));

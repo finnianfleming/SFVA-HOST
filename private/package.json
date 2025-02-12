@@ -1,4 +1,11 @@
 {
+  "name": "sfva-host",
+  "version": "1.0.0",
+  "description": "scott fleming website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
