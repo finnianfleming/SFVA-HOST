@@ -1,7 +1,7 @@
 {
   "name": "sfva-host",
   "version": "1.0.0",
-  "description": "scott fleming website",
+  "description": "A contact form server hosted on Render using Express and Nodemailer.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,5 +11,11 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemailer": "^6.10.0"
-  }
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
+

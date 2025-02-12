@@ -6,6 +6,24 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/smalllogo.jpg" type="favicon">
+  <style>
+    /* Notification styles */
+    .notification {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .notification.error {
+        background-color: #f44336;
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -45,7 +63,7 @@
         <section class="contact-form">
             <h2>Contact Us</h2>
             <p>If you have any questions, inquiries, or just want to get in touch, please fill out the form below and we will respond as soon as possible.</p>
-            <form action="/contact" method="post">
+            <form id="contactForm">
               <div class="form-group">
                   <label for="name">Your Name:</label>
                   <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -60,11 +78,61 @@
               </div>
               <button type="submit">Submit</button>
           </form>
+          <!-- Notification container -->
+          <div id="notification" class="notification"></div>
         </section>
     </main>
 
     <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
       <a href="index.html" class="index-link">Home Page</a>
     </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const notification = document.getElementById('notification');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showNotification('Your message has been sent successfully!', false);
+                    form.reset(); // Clear the form
+                } else {
+                    showNotification(result.error || 'Failed to send your message. Please try again.', true);
+                }
+            } catch (error) {
+                showNotification('An error occurred. Please try again later.', true);
+            }
+        });
+
+        function showNotification(message, isError) {
+            notification.textContent = message;
+            notification.className = `notification ${isError ? 'error' : ''}`;
+            notification.style.display = 'block';
+
+            // Hide the notification after 5 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
+

@@ -5,12 +5,8 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000; // Use the PORT environment variable provided by Render
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
 
-
-// Serve static files from the public folder
+// Middleware to serve static files
 app.use(express.static(__dirname + '/../'));
 
 // Middleware for parsing form data
@@ -49,12 +45,12 @@ app.post('/contact', async (req, res) => {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ success: 'Your message has been sent successfully!' });
     } catch (error) {
-        console.error(error);
+        console.error('Error sending email:', error);
         res.status(500).json({ error: 'Failed to send message. Please try again later.' });
     }
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
