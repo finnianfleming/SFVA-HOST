@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 90%; /* Slightly reduced width for smaller screens */
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -32,18 +32,16 @@ a:hover {
 header {
     background-color: #c6c2b6;
     color: white;
-    text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
 }
 
 .header-image {
     width: 150px;
     height: auto;
-    margin: 0 auto;
 }
 
 .social-media {
@@ -52,7 +50,6 @@ header {
     margin: 0;
     display: flex;
     gap: 15px;
-    justify-content: center;
 }
 
 .social-media img {
@@ -84,8 +81,8 @@ header {
 }
 
 .profile-img {
-    width: 90%; /* Full width for smaller screens */
-    max-width: 600px;
+    width: 90%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -104,8 +101,9 @@ header {
 }
 
 .audible-link img {
-    max-width: 200px;
+    max-width: 150px; /* Limit size on PC screens */
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -232,12 +230,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack logo and social media */
         align-items: center;
     }
 
     .social-media {
-        justify-content: center;
+        margin-top: 10px;
     }
 
     .about-container {
@@ -255,7 +253,7 @@ footer {
     }
 
     .audible-link img {
-        max-width: 150px;
+        max-width: 120px; /* Reduce size for tablets */
     }
 }
 
@@ -280,7 +278,12 @@ footer {
         font-size: 0.9rem;
         padding: 8px;
     }
+
+    .audible-link img {
+        max-width: 100px; /* Smaller size for mobile */
+    }
 }
+
 
 
 
