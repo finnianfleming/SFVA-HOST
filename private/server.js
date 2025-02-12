@@ -7,14 +7,12 @@ const app = express();
 const PORT = process.env.PORT || 3000; // Use the PORT environment variable provided by Render
 
 // Middleware to serve static files
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '../'));
 
 // Middleware for parsing form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-console.log('Email:', process.env.EMAIL);
-console.log('Password:', process.env.EMAIL_PASSWORD);
 
 // Route to handle form submissions
 app.post('/contact', async (req, res) => {
