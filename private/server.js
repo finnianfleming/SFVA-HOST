@@ -9,10 +9,12 @@ const PORT = process.env.PORT || 3000; // Use the PORT environment variable prov
 // Middleware to serve static files
 app.use(express.static(__dirname + '/../public'));
 
-
 // Middleware for parsing form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+console.log('Email:', process.env.EMAIL);
+console.log('Password:', process.env.EMAIL_PASSWORD);
 
 // Route to handle form submissions
 app.post('/contact', async (req, res) => {
