@@ -318,15 +318,22 @@ footer {
         grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row */
     }
 
-    .header-container {
-        flex-direction: row;
-        justify-content: space-between;
+        .header-container {
+            flex-direction: row; /* Keep the header layout horizontal */
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .social-media {
+            justify-content: flex-end; /* Align the icons to the far right */
+            position: absolute; /* Take the icons out of the flow */
+            right: 20px; /* Position them 20px from the right edge */
+            top: 20px; /* Align them vertically with the logo */
+            display: flex;
+            gap: 15px;
+        }
     }
-
-    .social-media {
-        justify-content: flex-end; /* Align social media icons to the right */
-    }
-}
+    
 
 
 
