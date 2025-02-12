@@ -122,6 +122,13 @@ header {
     text-align: center;
 }
 
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -137,10 +144,6 @@ header {
     padding: 20px;
     text-align: center;
     transition: box-shadow 0.3s; /* Animation only for shadow */
-}
-
-.project-card:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Only shadow animates */
 }
 
 .project-card img {
@@ -312,11 +315,7 @@ footer {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row on larger screens */
-    }
-
-    .audible-link img {
-        max-width: 150px; /* Adjust size for desktop */
+        grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row */
     }
 
     .header-container {
@@ -328,6 +327,7 @@ footer {
         justify-content: flex-end; /* Align social media icons to the right */
     }
 }
+
 
 
 
