@@ -50,6 +50,8 @@ header {
     margin: 0;
     display: flex;
     gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social-media img {
@@ -71,13 +73,13 @@ header {
 
 .about-container {
     display: flex;
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Center-align for smaller screens */
+    text-align: center;
 }
 
 .profile-img {
@@ -91,7 +93,6 @@ header {
 .about-description {
     font-size: 1.1rem;
     line-height: 1.8;
-    flex: 1;
 }
 
 /* Audible Link */
@@ -127,6 +128,12 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
@@ -230,7 +237,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Stack logo and social media */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -283,6 +290,24 @@ footer {
         max-width: 100px; /* Smaller size for mobile */
     }
 }
+
+@media (min-width: 1024px) {
+    .about-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row on larger screens */
+    }
+
+    .audible-link img {
+        max-width: 150px; /* Adjust size for desktop */
+    }
+}
+
 
 
 
