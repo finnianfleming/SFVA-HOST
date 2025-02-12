@@ -97,6 +97,18 @@ header {
     flex: 1;
 }
 
+/* Audible Link */
+.audible-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.audible-link img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 5px;
+}
+
 /* Section Styles */
 .section {
     padding: 40px 0;
@@ -221,12 +233,11 @@ footer {
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
     .social-media {
         justify-content: center;
-        margin-top: 15px;
     }
 
     .about-container {
@@ -243,9 +254,8 @@ footer {
         padding: 15px;
     }
 
-    button {
-        font-size: 1rem;
-        padding: 10px;
+    .audible-link img {
+        max-width: 150px;
     }
 }
 
@@ -271,6 +281,7 @@ footer {
         padding: 8px;
     }
 }
+
 
 
 
