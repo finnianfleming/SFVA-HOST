@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Slightly reduced width for smaller screens */
     margin: 0 auto;
     padding: 20px;
 }
@@ -20,30 +20,30 @@ h1, h2, h3 {
 }
 
 a {
-    color: #007BFF; /* Link color set to blue */
+    color: #007BFF;
     text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
 }
 
 /* Header Styles */
 header {
-    background-color: #c6c2b6; /* Light beige background for the header */
+    background-color: #c6c2b6;
     color: white;
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .header-image {
     width: 150px;
     height: auto;
-    margin-left: 20px;
-    margin-right:1000px;
+    margin: 0 auto;
 }
 
 .social-media {
@@ -52,6 +52,7 @@ header {
     margin: 0;
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
 .social-media img {
@@ -73,22 +74,25 @@ header {
 
 .about-container {
     display: flex;
+    flex-direction: column; /* Stack on small screens */
     align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center; /* Center-align for smaller screens */
 }
 
 .profile-img {
-    width: 600px;
+    width: 90%; /* Full width for smaller screens */
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .about-description {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     flex: 1;
 }
@@ -98,110 +102,6 @@ header {
     padding: 40px 0;
     text-align: center;
 }
-
-.section img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-/* Demo Reels Section */
-.audio-reels {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.audio-reel {
-    background: #121212;
-    padding: 15px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.audio-reel audio {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.reel-description {
-    font-size: 1rem;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* Contact Form Styles */
-.contact-form {
-    background: #121212; /* Match the dark background style of index page sections */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    max-width: 800px;
-    margin: 40px auto; /* Center the form on the page */
-    text-align: left;
-}
-
-.contact-form h2 {
-    color: white; /* Match the header styles from the index page */
-    text-align: center; /* Center-align the form heading */
-    margin-bottom: 20px;
-}
-
-.contact-form p {
-    font-size: 1.1rem;
-    color: #ccc; /* Subtle contrast for the description text */
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.form-group {
-    margin-bottom: 20px; /* Add consistent spacing between form fields */
-}
-
-label {
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: white; /* Match the label text color to the rest of the form */
-}
-
-input, textarea {
-    width: 100%; /* Stretch fields to match the layout of the index page */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px; /* Match rounded corners used elsewhere */
-    background: #000; /* Match input background with the page theme */
-    color: white; /* Ensure text is visible on the dark background */
-}
-
-textarea {
-    resize: vertical; /* Allow resizing only vertically */
-}
-
-button {
-    display: block;
-    width: 100%; /* Full-width button to match layout consistency */
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px; /* Match rounded corners for consistency */
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #0056b3; /* Add hover effect for interactivity */
-}
-
 
 /* Projects Section */
 .projects-grid {
@@ -225,12 +125,72 @@ button:hover {
     margin-bottom: 15px;
 }
 
-.project-card h3 {
-    margin: 10px 0 5px;
+/* Contact Form */
+.contact-form {
+    background: #121212;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
 }
 
-.project-card p {
-    font-size: 0.9rem;
+.contact-form h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #000;
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
 }
 
 /* Footer */
@@ -242,54 +202,26 @@ footer {
     border-top: 2px solid #007BFF;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Center the image */
-.center-image {
-    display: block;
-    margin: 0 auto; /* Horizontally centers the image */
-    max-width: 100px; /* Optional: set a maximum width for responsiveness */
-    margin-right:580px
-  }
-
-  /* Footer link styling */
-.footer-link {
-    color: #007bff; /* A nice blue color for the link */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Slightly larger text */
-    font-weight: bold; /* Make it bold */
-    padding: 5px 10px; /* Add padding around the link */
-    border-radius: 5px; /* Round corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
-  }
-  
-  .footer-link:hover {
-    background-color: #007bff; /* Change background on hover */
-    color: white; /* Make text white on hover */
-    text-decoration: underline; /* Optional: underline on hover */
-  }
-  
-a img {
-    display: block;
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px; /* Optional rounded corners */
-  }
-
-  /* Animation on hover */
-  a img:hover {
-    transform: scale(1.1); /* Scales the image slightly */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
-  }
+.footer-link:hover {
+    background-color: #007bff;
+    color: white;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
+        text-align: center;
     }
 
     .social-media {
@@ -297,25 +229,49 @@ a img {
         margin-top: 15px;
     }
 
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
-    }
-
-    .audio-reels {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .audio-reel {
-        width: 100%;
-        max-width: 400px;
     }
 
     .contact-form {
         width: 100%;
         padding: 15px;
     }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .header-image {
+        max-width: 100px;
+    }
+
+    .profile-img {
+        max-width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
 
 
   
