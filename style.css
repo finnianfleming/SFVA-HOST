@@ -23,37 +23,47 @@ a:hover {
 
 /* ========== Header ========== */
 header {
-  background-color: #c6c2b6;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
+    background-color: #c6c2b6;
+    padding: 10px 20px; /* Shorter height */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align logo and icons bottom-to-bottom */
+}
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
 }
 
 .header-image {
-  width: 150px;
-  height: auto;
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0; /* Make sure it's aligned properly */
 }
 
 .social-media {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 0; /* Aligns with bottom of logo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+
 .social-media img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s;
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
 }
 
 .social-media img:hover {
-  transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 /* ========== About Section ========== */
