@@ -1,370 +1,385 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #000000; /* Background color set to black */
-    color: white; /* Default text color updated to white */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-}
-.audio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.audio-block {
-    flex: 1 1 250px;
-    max-width: 300px;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.audio-block h3 {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: white;
-}
-
-.audio-block audio {
-    width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #000000;
+  color: white;
 }
 
 h1, h2, h3 {
-    color: white;
-    margin-bottom: 10px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 a {
-    color: #007BFF;
-    text-decoration: none;
+  color: #007BFF;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
-/* Header Styles */
+/* ========== Header ========== */
 header {
-    background-color: #c6c2b6;
-    color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: #c6c2b6;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .header-image {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 .social-media {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .social-media img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
 }
 
 .social-media img:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-/* About Section Styling */
+/* ========== About Section ========== */
 #about {
-    padding: 40px 0;
-    background-color: #000000;
-    color: white;
+  padding: 40px 0;
+  background-color: #000;
+  color: white;
 }
 
 .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .profile-img {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .about-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    word-break: break-word; /* Prevent text from overflowing */
-    overflow: visible; /* Ensure full text is shown */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  word-break: break-word;
 }
 
-/* Audible Link */
-.audible-link {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.audible-link img {
-    max-width: 150px; /* Limit size on PC screens */
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Add hover animation */
-}
-
-.audible-link img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Section Styles */
+/* ========== Projects Section ========== */
 .section {
-    padding: 40px 0;
-    text-align: center;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white;
-    text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
 }
 
-/* Projects Section */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
-    background: #021452;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    transition: box-shadow 0.3s; /* Animation only for shadow */
+  background: #021452;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
 }
 
 .project-card img {
-    border-radius: 5px;
-    max-width: 100%;
-    margin-bottom: 15px;
-    transition: transform 0.3s; /* Hover effect only for images */
+  border-radius: 5px;
+  max-width: 100%;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
 }
 
 .project-card img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Contact Form */
+/* ========== Voice Reels & Studio Setup ========== */
+.audio-tech-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.audio-column, .tech-column {
+  flex: 1 1 300px;
+}
+
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.audio-block {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.audio-block h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.audio-block audio {
+  width: 100%;
+}
+
+.tech-column {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.tech-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech-list li {
+  margin-bottom: 12px;
+}
+
+.tech-list a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tech-list a:hover {
+  color: #80deea;
+}
+
+.studio-photo {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.studio-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== Audible Link ========== */
+.audible-link {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.audible-link img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.audible-link img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== Contact Form ========== */
 .contact-form {
-    background: #121212;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    max-width: 600px;
-    margin: 40px auto;
-    text-align: left;
+  background: #121212;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
 }
 
-.contact-form h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-form p {
-    font-size: 1rem;
-    color: #ccc;
-    text-align: center;
-    margin-bottom: 20px;
+.contact-form h2, .contact-form p {
+  text-align: center;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #000;
-    color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #000;
+  color: white;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 button {
-    display: block;
-    width: 100%;
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  display: block;
+  width: 100%;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    border-top: 2px solid #007BFF;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #007BFF;
 }
 
 .footer-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-link:hover {
-    background-color: #007bff;
-    color: white;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-/* Responsive Design */
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .social-media {
-        margin-top: 10px;
-    }
+  .social-media {
+    margin-top: 10px;
+  }
 
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .contact-form {
-        width: 100%;
-        padding: 15px;
-    }
+  .contact-form {
+    width: 100%;
+    padding: 15px;
+  }
 
-    .audible-link img {
-        max-width: 120px; /* Reduce size for tablets */
-    }
+  .audible-link img {
+    max-width: 120px;
+  }
 }
 
 @media (max-width: 480px) {
-    h1, h2, h3 {
-        font-size: 1.2rem;
-    }
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
 
-    p {
-        font-size: 1rem;
-    }
+  .header-image {
+    max-width: 100px;
+  }
 
-    .header-image {
-        max-width: 100px;
-    }
+  .profile-img {
+    max-width: 90%;
+  }
 
-    .profile-img {
-        max-width: 90%;
-    }
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 
-    button {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .audible-link img {
-        max-width: 100px; /* Smaller size for mobile */
-    }
+  .audible-link img {
+    max-width: 100px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .about-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-    }
+  .about-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
 
-    .projects-grid {
-        grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row */
-    }
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-        .header-container {
-            flex-direction: row; /* Keep the header layout horizontal */
-            justify-content: space-between;
-            align-items: center;
-        }
-    
-        .social-media {
-            justify-content: flex-end; /* Align the icons to the far right */
-            position: absolute; /* Take the icons out of the flow */
-            right: 20px; /* Position them 20px from the right edge */
-            top: 20px; /* Align them vertically with the logo */
-            display: flex;
-            gap: 15px;
-        }
-    }
-    
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-
-
-
+  .social-media {
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
 
 
 
