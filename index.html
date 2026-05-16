@@ -14,9 +14,26 @@
   line-height: 1.6;
 }
 
-.reel-dropdowns {
+.reel-sections {
   display: grid;
   gap: 1rem;
+}
+
+.single-reel-players {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.single-reel-block {
+  min-width: 0;
+  text-align: center;
+}
+
+.single-reel-block audio {
+  width: 100%;
+  display: block;
 }
 
 .reel-category {
@@ -33,9 +50,9 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.1rem;
-  cursor: pointer;
   list-style: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .reel-category summary::-webkit-details-marker {
@@ -96,6 +113,12 @@
 
 .featured-reel {
   border: 1px solid rgba(127, 127, 127, 0.28);
+}
+
+@media (max-width: 900px) {
+  .single-reel-players {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
@@ -162,194 +185,76 @@ Notably, his narration of The Maxx King Thriller series by John T. Thomas won th
   <div class="audio-tech-wrapper">
     <div class="audio-column">
       <h2 class="section-title">Voice Reels</h2>
-      <p class="reel-intro">Choose a reel type below to hear Scott Fleming across audiobooks, commercials, narrative work and gaming/character voiceover.</p>
-      <div class="reel-dropdowns">
-    <details class="reel-category">
-      <summary>
-        <span class="reel-summary-text">
-          <span>Commercial Reels</span>
-          <small>Main commercial showreel plus brand-style reads.</small>
-        </span>
-        <span class="reel-count">8 tracks</span>
-      </summary>
-      <div class="reel-content">
-        <div class="audio-grid">
-        <div class="audio-block featured-reel">
-          <h3>Commercial Showreel</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - commercial reel.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+      <p class="reel-intro">Listen to Scott Fleming across commercial, gaming, audiobook and narrative voice work. Main reels are shown first, with the narrative category available below.</p>
+
+      <div class="reel-sections">
+        <div class="single-reel-players">
+          <div class="audio-block featured-reel single-reel-block">
+            <h3>Commercial Reel</h3>
+            <audio controls preload="none" aria-label="Commercial Reel">
+              <source src="assets/Scott Fleming - commercial reel.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-block featured-reel single-reel-block">
+            <h3>Gaming Reel</h3>
+            <audio controls preload="none" aria-label="Gaming Reel">
+              <source src="assets/SF_game_long.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </div>
-        <div class="audio-block">
-          <h3>Checkatrade</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - checkatrade.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+
+        <div class="single-reel-players audiobook-reel-players">
+          <div class="audio-block featured-reel single-reel-block">
+            <h3>Audiobook - General British</h3>
+            <audio controls preload="none" aria-label="General British">
+              <source src="assets/SCOTT FLEMING - Audiobook reel - General British.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="audio-block featured-reel single-reel-block">
+            <h3>Audiobook - General American</h3>
+            <audio controls preload="none" aria-label="General American">
+              <source src="assets/SCOTT FLEMING - Audiobook reel - General American.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </div>
-        <div class="audio-block">
-          <h3>Lidl</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - lidl.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>RBS</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - RBS.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>RSPCA</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - RSPCA.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Vitality</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - vitality.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Volvo</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - Volvo.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Wickes</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - wickes.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        </div>
-      </div>
-    </details>
-    <details class="reel-category">
-      <summary>
-        <span class="reel-summary-text">
-          <span>Narrative &amp; Explainer Reels</span>
-          <small>Story-led narration, documentary-style and explainer reads.</small>
-        </span>
-        <span class="reel-count">3 tracks</span>
-      </summary>
-      <div class="reel-content">
-        <div class="audio-grid">
-        <div class="audio-block featured-reel">
-          <h3>Narrative Showreel</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - narrative reel.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>PC Explainer</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - PC Explainer.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Our World</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - our world.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        </div>
-      </div>
-    </details>
-    <details class="reel-category">
-      <summary>
-        <span class="reel-summary-text">
-          <span>Gaming &amp; Character Reels</span>
-          <small>Gaming showreels and individual character-style samples.</small>
-        </span>
-        <span class="reel-count">10 tracks</span>
-      </summary>
-      <div class="reel-content">
-        <div class="audio-grid">
-        <div class="audio-block featured-reel">
-          <h3>Gaming Showreel – Short Cut</h3>
-          <audio controls preload="none">
-            <source src="assets/Scott Fleming - game reel_cut.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block featured-reel">
-          <h3>Gaming Showreel – Long</h3>
-          <audio controls preload="none">
-            <source src="assets/SF_game_long.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Brodie</h3>
-          <audio controls preload="none">
-            <source src="assets/brodie.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Elden Ring</h3>
-          <audio controls preload="none">
-            <source src="assets/elden ring.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Mayor Julius</h3>
-          <audio controls preload="none">
-            <source src="assets/mayor julius.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Odin</h3>
-          <audio controls preload="none">
-            <source src="assets/odin.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Odysseus</h3>
-          <audio controls preload="none">
-            <source src="assets/odysseus.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Price</h3>
-          <audio controls preload="none">
-            <source src="assets/price.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Rapture Radio</h3>
-          <audio controls preload="none">
-            <source src="assets/rapture radio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="audio-block">
-          <h3>Red Dead</h3>
-          <audio controls preload="none">
-            <source src="assets/red dead.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        </div>
-      </div>
-    </details>
+
+        <details class="reel-category">
+          <summary>
+            <span class="reel-summary-text">
+              <span>Narrative Reels</span>
+            </span>
+            <span class="reel-count">3 tracks</span>
+          </summary>
+          <div class="reel-content">
+            <div class="audio-grid">
+              <div class="audio-block featured-reel">
+                <h3>Narrative Reel</h3>
+                <audio controls preload="none">
+                  <source src="assets/Scott Fleming - narrative reel.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              <div class="audio-block">
+                <h3>PC Explainer</h3>
+                <audio controls preload="none">
+                  <source src="assets/Scott Fleming - PC Explainer.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+              <div class="audio-block">
+                <h3>Our World</h3>
+                <audio controls preload="none">
+                  <source src="assets/Scott Fleming - our world.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </div>
+        </details>
       </div>
     </div>
 
